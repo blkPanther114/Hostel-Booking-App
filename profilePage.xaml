@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileAssigenment2.profilePage" Title="Profile" BackgroundImage="pagebg.jpg" >
+  <ContentPage.Content >
+        <StackLayout >
+            <StackLayout Orientation="Horizontal">
+                <Frame BorderColor="Red">
+                    <Image x:Name="image" Aspect="Fill" HeightRequest="130" WidthRequest="130"></Image>
+                </Frame>
+                <StackLayout>
+                    <Label Text="Weclome" FontFamily="Arial" FontSize="Large" TextColor="RoyalBlue" ></Label>
+                    <Label x:Name="profileUserName" FontFamily="Arial" FontSize="Medium" TextColor="RoyalBlue"></Label>
+                       <Entry  Placeholder="enter new user name" x:Name="changeName"  IsVisible="False" WidthRequest="150"></Entry>
+                    <Label x:Name="userEmail" FontFamily="Arial" FontSize="Medium" TextColor="RoyalBlue"></Label>
+                    <Entry  Placeholder="enter new email" x:Name="newEmail"  IsVisible="False" WidthRequest="150"></Entry>
+                    <Entry  Placeholder="enter new password" x:Name="newpassword"  IsVisible="False" WidthRequest="150"></Entry>
+                </StackLayout>
+            </StackLayout>
+            
+            <StackLayout Orientation="Horizontal" VerticalOptions="End" HorizontalOptions="Center" >
+                <Button Text="Edit" x:Name="edit" Clicked="editClicked" FontFamily="Arial" BackgroundColor="LightBlue" IsVisible="True" ></Button>
+                <Button Text="Cancel"  x:Name="cancel" Clicked="cancelClicked" FontFamily="Arial" BackgroundColor="LightBlue" IsVisible="False"></Button>
+                <Button Text="Save"  x:Name="save" Clicked="saveClicked" FontFamily="Arial" BackgroundColor="LightBlue" IsVisible="False"></Button>
+                <Button  Text="pick image" x:Name="getImage" Clicked="pickImageClicked" FontFamily="Arial" BackgroundColor="LightBlue" IsVisible="False"></Button>
+            </StackLayout>
+            <StackLayout VerticalOptions="EndAndExpand" HorizontalOptions="Center">
+                <Button Text="Log out" Clicked="logout_Clicked" FontFamily="Arial" BackgroundColor="LightBlue" HeightRequest="50" ></Button>
+                
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>

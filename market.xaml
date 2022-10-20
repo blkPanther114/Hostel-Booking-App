@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileAssigenment2.market" Title="Market" BackgroundImage="pagebg.jpg">
+    <ContentPage.Content>
+        
+        <StackLayout>
+            <Label Text="Search books:" FontFamily="Arial" FontSize="Medium" TextColor="RoyalBlue" HorizontalOptions="Center" VerticalOptions="Start" />
+            <StackLayout>                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" >                    <Label Text="Filter books; Key word:"  FontFamily="Arial" FontSize="Small" TextColor="RoyalBlue" />                    <Entry  x:Name="byName" FontFamily="Arial" FontSize="Small" TextColor="RoyalBlue" WidthRequest="120" ></Entry>                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Button Text="search"  Clicked="searchClicked" FontFamily="Arial" BackgroundColor="LightBlue" HeightRequest="40" ></Button>
+                    <Button Text="refresh"  Clicked="refreshClicked" FontFamily="Arial" BackgroundColor="LightBlue" HeightRequest="40" ></Button>
+                </StackLayout>
+        </StackLayout>
+            <Label Text="market:" FontFamily="Arial" FontSize="Medium" TextColor="RoyalBlue" HorizontalOptions="Center" VerticalOptions="Start" />
+        <StackLayout VerticalOptions="CenterAndExpand">
+              
+            <ScrollView>
+
+                    <ListView x:Name="marketBookList" ItemSelected="bookSelected"   RowHeight="80" >
+                    <ListView.ItemTemplate>
+                    <DataTemplate>
+                            <ViewCell >
+                                <StackLayout Orientation="Horizontal">
+                                    <Frame BorderColor="Red">
+                                        <Image Source="{Binding booksCover}" HeightRequest="50" WidthRequest="50"></Image>
+                                    </Frame>
+                                    <StackLayout >
+                                    <StackLayout   Orientation="Horizontal" VerticalOptions="StartAndExpand" >
+                                        <Label Text="Book name:" FontFamily="Arial" FontSize="Small" TextColor="RoyalBlue"></Label>
+                                    <Label Text = "{Binding booksName}"  FontFamily="Arial" FontSize="Small" TextColor="RoyalBlue" AbsoluteLayout.LayoutBounds="0.25, 0.25, 400, 40"/>
+                                     
+                                    </StackLayout>
+                                    <StackLayout   Orientation="Horizontal" VerticalOptions="StartAndExpand">
+                                        <Label Text="Book  type:" FontFamily="Arial" FontSize="Small" TextColor="RoyalBlue"></Label>
+                                        <Label Text = "{Binding booksType}" FontFamily="Arial" FontSize="Small" TextColor="RoyalBlue" AbsoluteLayout.LayoutBounds="50, 35, 200, 25"/>
+                                    </StackLayout>
+
+                                    <StackLayout   Orientation="Horizontal" VerticalOptions="StartAndExpand">
+                                        <Label Text="Description:" FontFamily="Arial" FontSize="Small" TextColor="RoyalBlue"></Label>
+                                        <Label Text = "{Binding description}" FontFamily="Arial" FontSize="Small" TextColor="RoyalBlue" AbsoluteLayout.LayoutBounds="50, 35, 200, 25"/>
+                                    </StackLayout>
+                                    
+                                </StackLayout>
+                                </StackLayout>
+                                
+                            </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>                </ScrollView>            </StackLayout>        </StackLayout>
+        
+        
+    </ContentPage.Content>
+    
+</ContentPage>

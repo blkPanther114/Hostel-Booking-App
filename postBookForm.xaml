@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileAssigenment2.postBookForm" BackgroundImage="pagebg.jpg">
+    <ContentPage.Content>
+        <StackLayout >
+            <StackLayout HeightRequest="40">
+                <Label Text="enter book details" HorizontalOptions="Center" FontFamily="Arial" FontSize="Large" TextColor="RoyalBlue"></Label>
+            </StackLayout>
+            <StackLayout HorizontalOptions="Center" HeightRequest="120">
+                <Frame BorderColor="Red">
+                    <Image x:Name="loadBookCover"  WidthRequest="80" HeightRequest="80"></Image>
+                </Frame>
+            </StackLayout>
+            <Button Text="load book"   Clicked="load_Clicked" FontFamily="Arial" FontSize="Small"  ></Button>
+            <StackLayout Orientation="Horizontal" >
+                <Label Text="Name :" FontFamily="Arial" FontSize="Medium" TextColor="RoyalBlue"></Label>
+                <Entry x:Name="bookName" WidthRequest="140"  FontFamily="Arial" FontSize="Medium" TextColor="RoyalBlue"></Entry>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Type :" FontFamily="Arial" FontSize="Medium" TextColor="RoyalBlue"></Label>
+                <Entry x:Name="bookType" WidthRequest="140" FontFamily="Arial" FontSize="Medium" TextColor="RoyalBlue"></Entry>
+            </StackLayout>
+            <StackLayout HeightRequest="200">
+                <Label Text="Description :" FontFamily="Arial" FontSize="Medium" TextColor="RoyalBlue"></Label>
+            <Editor x:Name="description" WidthRequest="140" HeightRequest="180" FontFamily="Arial" FontSize="Medium" TextColor="RoyalBlue"></Editor>
+               </StackLayout>
+
+                <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" HorizontalOptions="Center"> 
+                <Button Text="post" Clicked="postClicked" FontFamily="Arial" FontSize="Small" BackgroundColor="LightBlue"  HeightRequest="50"></Button>
+                <Button Text="exit" Clicked="exitClicked" FontFamily="Arial" FontSize="Small" BackgroundColor="LightBlue"  HeightRequest="50"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

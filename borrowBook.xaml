@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileAssigenment2.borrowBook" BackgroundImage="pagebg.jpg" >
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout HeightRequest="50">
+                <Label Text="Book details" FontFamily="Arial" FontSize="Large" TextColor="RoyalBlue" HorizontalOptions="Center"></Label>
+            </StackLayout>
+
+            <StackLayout HorizontalOptions="Center" HeightRequest="120">
+                <Frame BorderColor="Red">
+                    <Image x:Name="images" WidthRequest="80" HeightRequest="80"></Image>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal"  VerticalOptions="Center" HeightRequest="30">
+                <Label Text="Book name :"  FontFamily="Arial" FontSize="Medium" TextColor="RoyalBlue"></Label>
+                <Label  Text="" x:Name="name"  FontFamily="Arial" FontSize="Medium" TextColor="Red" ></Label>
+                </StackLayout>
+
+            <StackLayout Orientation="Horizontal"  VerticalOptions="Center" HeightRequest="30">
+                <Label Text="Book type :"  FontFamily="Arial" FontSize="Medium" TextColor="RoyalBlue"></Label>
+                <Label  Text="" x:Name="type"  FontFamily="Arial" FontSize="Medium" TextColor="Red"></Label>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal"  VerticalOptions="Center" HeightRequest="30">
+                <Label Text="owner's name :"  FontFamily="Arial" FontSize="Medium" TextColor="RoyalBlue"></Label>
+                <Label  Text="" x:Name="oname"   FontFamily="Arial" FontSize="Medium" TextColor="Red"></Label>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" HeightRequest="30">
+                <Label Text="viewed  :" FontFamily="Arial" FontSize="Medium" TextColor="RoyalBlue"></Label>
+                <Label x:Name="viewTimes" FontFamily="Arial" FontSize="Medium" TextColor="Red"></Label>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal"  HeightRequest="30">
+                <Label Text="borrowed :" FontFamily="Arial" FontSize="Medium" TextColor="RoyalBlue"></Label>
+                <Label x:Name="lendedTime" FontFamily="Arial" FontSize="Medium" TextColor="Red"></Label>
+            </StackLayout>
+            
+           
+                <Label Text="description  :"  FontFamily="Arial" FontSize="Medium" TextColor="RoyalBlue"></Label>
+            <StackLayout Orientation="Horizontal"  VerticalOptions="Center" HeightRequest="70">
+                <Label  Text="" x:Name="description"  FontFamily="Arial" FontSize="Medium" TextColor="Red" ></Label>
+            </StackLayout>
+
+          
+
+
+            <StackLayout Orientation="Horizontal"  VerticalOptions="Center" HeightRequest="50">
+                <Label Text="from date  :"  FontFamily="Arial" FontSize="Medium" TextColor="RoyalBlue"></Label>
+                <DatePicker x:Name="startDate" Format="dd MMM yyyy" Date="02 Nov 2018" ></DatePicker>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" VerticalOptions="Center" HeightRequest="50">
+                <Label Text="to date   :"  FontFamily="Arial" FontSize="Medium" TextColor="RoyalBlue"></Label>
+                <DatePicker x:Name="endDate"  Format="dd MMM yyyy" Date="02 Nov 2019"></DatePicker>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="End">
+                <Button Text="Borrow" Clicked="borrowClicked" BackgroundColor="LightBlue"></Button>
+                <Button Text="Cancel" Clicked="cancelClicked" BackgroundColor="LightBlue"></Button>
+            </StackLayout>
+               
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileAssigenment2.viewBorrowedBook" BackgroundImage="pagebg.jpg">
+    <ContentPage.Content>
+        
+        <StackLayout>
+            <StackLayout HeightRequest="50">
+                <Label Text="Your borrowed book details" FontFamily="Arial" FontSize="Large" TextColor="RoyalBlue" HorizontalOptions="Center"></Label>
+            </StackLayout>
+
+            <StackLayout HorizontalOptions="Center" HeightRequest="120">
+                <Frame BorderColor="Red">
+                    <Image x:Name="images" WidthRequest="80" HeightRequest="80"></Image>
+                </Frame>
+            </StackLayout>
+            
+            <StackLayout Orientation="Horizontal" HeightRequest="30">
+                <Label Text="Book name:" FontFamily="Arial" FontSize="Medium" TextColor="RoyalBlue"></Label>
+                <Label  x:Name="bName" FontFamily="Arial" FontSize="Medium" TextColor="Red"></Label>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" HeightRequest="30">
+                <Label Text="Book type:" FontFamily="Arial" FontSize="Medium" TextColor="RoyalBlue"></Label>
+                <Label  x:Name="bType" FontFamily="Arial" FontSize="Medium" TextColor="Red"></Label>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" HeightRequest="30">
+                <Label Text="Book owner:" FontFamily="Arial" FontSize="Medium" TextColor="RoyalBlue"></Label>
+                <Label  x:Name="bOwner" FontFamily="Arial" FontSize="Medium" TextColor="Red"></Label>
+            </StackLayout>
+
+
+           
+                <Label Text="description:" FontFamily="Arial" FontSize="Medium" TextColor="RoyalBlue"></Label>
+            <StackLayout Orientation="Horizontal" HeightRequest="70">
+                <Label  x:Name="bookDescription" FontFamily="Arial" FontSize="Medium" TextColor="Red"></Label>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" HeightRequest="30">
+                <Label Text="viewed:" FontFamily="Arial" FontSize="Medium" TextColor="RoyalBlue" ></Label>
+                <Label  x:Name="viewTime" FontFamily="Arial" FontSize="Medium" TextColor="Red"></Label>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" HeightRequest="30">
+                <Label Text="borrowed:" FontFamily="Arial" FontSize="Medium" TextColor="RoyalBlue"></Label>
+                <Label  x:Name="borrow" FontFamily="Arial" FontSize="Medium" TextColor="Red"></Label>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" HeightRequest="50">
+                <Label Text="Book brorrow date:" FontFamily="Arial" FontSize="Medium" TextColor="RoyalBlue"></Label>
+                <Label  x:Name="startD" FontFamily="Arial" FontSize="Medium" TextColor="Red"></Label>
+           </StackLayout>
+
+            <StackLayout Orientation="Horizontal" HeightRequest="50">
+                <Label Text="Book return date:" FontFamily="Arial" FontSize="Medium" TextColor="RoyalBlue"></Label>
+                <Label  x:Name="endD" FontFamily="Arial" FontSize="Medium" TextColor="Red"></Label>
+             </StackLayout>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="End">
+                <Button Text="return" Clicked="returnClicked" FontFamily="Arial" FontSize="Medium" TextColor="RoyalBlue"></Button>
+                <Button Text="Cancel" Clicked="cancelClicked" FontFamily="Arial" FontSize="Medium" TextColor="RoyalBlue"></Button>
+        </StackLayout>
+            </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

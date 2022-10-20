@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileAssigenment2.modifyYourBookPage" BackgroundImage="pagebg.jpg" Title="Your Book details">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout HeightRequest="50">
+                <Label Text="Book details" FontFamily="Arial" FontSize="Large" TextColor="RoyalBlue" HorizontalOptions="Center"></Label>
+            </StackLayout>
+
+            <StackLayout HorizontalOptions="Center" HeightRequest="120">
+                <Frame BorderColor="Red">
+                    <Image x:Name="loadBookCover"  WidthRequest="80" HeightRequest="80"></Image>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" HeightRequest="50">
+                <Label Text="Book name:" FontFamily="Arial" FontSize="Medium" TextColor="RoyalBlue"></Label>
+                <Label   x:Name="name" FontFamily="Arial" FontSize="Medium" TextColor="Red" ></Label>
+            </StackLayout>
+            <Entry Placeholder="entry new book name" x:Name="newBookName" IsVisible="False"></Entry>
+
+            <StackLayout Orientation="Horizontal" HeightRequest="50">
+                <Label Text="Book type:" FontFamily="Arial" FontSize="Medium" TextColor="RoyalBlue"></Label>
+                <Label   x:Name="type" FontFamily="Arial" FontSize="Medium" TextColor="Red"></Label>
+            </StackLayout>
+
+            <Entry Placeholder="entry new book type" x:Name="newBookType" IsVisible="False"></Entry>
+            <StackLayout Orientation="Horizontal" HeightRequest="50">
+                <Label Text="viewed :" FontFamily="Arial" FontSize="Medium" TextColor="RoyalBlue"></Label>
+                <Label   x:Name="view" FontFamily="Arial" FontSize="Medium" TextColor="Red"></Label>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" HeightRequest="50">
+                <Label Text="borrowed :" FontFamily="Arial" FontSize="Medium" TextColor="RoyalBlue"></Label>
+                <Label   x:Name="borrow" FontFamily="Arial" FontSize="Medium" TextColor="Red"></Label>
+            </StackLayout>
+                
+                <Label Text="description:" FontFamily="Arial" FontSize="Medium" TextColor="RoyalBlue"></Label>
+            <StackLayout Orientation="Horizontal" HeightRequest="50" >
+                <Label   x:Name="getDescription" FontFamily="Arial" FontSize="Medium" TextColor="Red"></Label>
+            </StackLayout>
+            <StackLayout HeightRequest="70">
+                <Editor x:Name="modifyDescription"  IsVisible="False" VerticalOptions="FillAndExpand"></Editor>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="End">
+                <Button Text="Modify" Clicked="modifyClicked" IsVisible="True" BackgroundColor="LightBlue" x:Name="modifyButton"></Button>
+                <Button Text="back" Clicked="cancelClicked"  x:Name="backButton" BackgroundColor="LightBlue" IsVisible="True"></Button>
+                <Button Text="Delete" Clicked="deleteClicked" BackgroundColor="LightBlue"></Button>
+                <Button Text="save changes" Clicked="saveClicked" BackgroundColor="LightBlue" IsVisible="False" x:Name="saveChange"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

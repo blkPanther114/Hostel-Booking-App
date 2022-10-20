@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileAssigenment2.viewLendedBook" BackgroundImage="pagebg.jpg">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <StackLayout HeightRequest="50">
+                <Label Text="Being borrowed Books details"  FontFamily="Arial" FontSize="Medium" TextColor="RoyalBlue" HorizontalOptions="Center"></Label>
+           </StackLayout>
+
+            <StackLayout HorizontalOptions="Center" HeightRequest="120">
+                <Frame BorderColor="Red">
+                    <Image x:Name="images" WidthRequest="80" HeightRequest="80"></Image>
+                </Frame>
+               </StackLayout>
+
+            <StackLayout Orientation="Horizontal" HeightRequest="50">
+                <Label Text="Book name:" FontFamily="Arial" FontSize="Medium" TextColor="RoyalBlue"></Label>
+                <Label   x:Name="name"  FontFamily="Arial" FontSize="Medium" TextColor="Red"></Label>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" HeightRequest="50">
+                <Label Text="Book type:" FontFamily="Arial" FontSize="Medium" TextColor="RoyalBlue"></Label>
+                <Label   x:Name="type" FontFamily="Arial" FontSize="Medium" TextColor="Red"></Label>
+            </StackLayout>
+
+
+
+            <StackLayout Orientation="Horizontal" HeightRequest="50">
+                <Label Text="Borrower's name:" FontFamily="Arial" FontSize="Medium" TextColor="RoyalBlue"></Label>
+                <Label   x:Name="Bername" FontFamily="Arial" FontSize="Medium" TextColor="Red" ></Label>
+            </StackLayout>
+
+
+            <StackLayout Orientation="Horizontal" HeightRequest="50">
+                <Label Text="Borrower's email:" FontFamily="Arial" FontSize="Medium" TextColor="RoyalBlue"></Label>
+                <Label   x:Name="email"  FontFamily="Arial" FontSize="Medium" TextColor="Red" ></Label>
+            </StackLayout>
+            
+            <StackLayout Orientation="Horizontal" HeightRequest="50">
+                <Label Text="viewed :" FontFamily="Arial" FontSize="Medium" TextColor="RoyalBlue"></Label>
+                <Label   x:Name="view" FontFamily="Arial" FontSize="Medium" TextColor="Red"></Label>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" HeightRequest="50">
+                <Label Text="borrowed :" FontFamily="Arial" FontSize="Medium" TextColor="RoyalBlue"></Label>
+                <Label   x:Name="borrow" FontFamily="Arial" FontSize="Medium" TextColor="Red"></Label>
+            </StackLayout>
+      
+           
+                <Label Text="description:" FontFamily="Arial" FontSize="Medium" TextColor="RoyalBlue"></Label>
+            <StackLayout Orientation="Horizontal" HeightRequest="50">
+                <Label   x:Name="getDescription" FontFamily="Arial" FontSize="Medium" TextColor="Red"></Label>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" HeightRequest="50">
+                <Label Text="loan from:" FontFamily="Arial" FontSize="Medium" TextColor="RoyalBlue"></Label>
+                <Label   x:Name="startDate" FontFamily="Arial" FontSize="Medium" TextColor="Red"></Label>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" HeightRequest="50">
+                <Label Text="until data:" FontFamily="Arial" FontSize="Medium" TextColor="RoyalBlue"></Label>
+                <Label   x:Name="returnDate" FontFamily="Arial" FontSize="Medium" TextColor="Red"></Label>
+            </StackLayout>
+            
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="End">
+                <Button Text="Ok"  FontFamily="Arial" FontSize="Small" TextColor="RoyalBlue" Clicked="okClicked"></Button>
+                <Button Text="Email borrower"  FontFamily="Arial" FontSize="Small" TextColor="RoyalBlue" Clicked="emailClicked"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileAssigenment2.SignPage" BackgroundColor="LightBlue" BackgroundImage="main.png">
+    <ContentPage.Content>
+        <StackLayout >
+            <StackLayout  >
+                <Image x:Name="imga"  HeightRequest="130" Aspect="AspectFill" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" >
+                <Frame BorderColor="red">
+                    <Image x:Name="profilePhoto"   WidthRequest="110" HeightRequest="100"></Image>
+                </Frame>
+                <Button Text="pick photo" x:Name="Uphoto" Clicked="pickPhoto_clicked" HorizontalOptions="End" VerticalOptions="Center"></Button>
+            </StackLayout>
+            <StackLayout VerticalOptions="Center">
+                <Entry Placeholder="create username" x:Name="cUserName" AnchorX="40"></Entry>
+                <Entry Placeholder="create password" x:Name="cPassWord" WidthRequest="100" ></Entry>
+                <Entry Placeholder="enter email" x:Name="cEmail" WidthRequest="100" ></Entry>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center"> 
+                <Button Text="Sign" Clicked="Sign_Clicked" FontSize="13" BackgroundColor="LightBlue" WidthRequest="100" HeightRequest="35"></Button>
+                <Button Text="Cancel" Clicked="Cancel_Clicked" FontSize="13" BackgroundColor="LightBlue" WidthRequest="100" HeightRequest="35"></Button>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

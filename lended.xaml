@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileAssigenment2.lended" Title="Lend" BackgroundImage="pagebg.jpg">
+    <ContentPage.Content>
+
+        <StackLayout>
+            <Label Text="Your book in Market:" FontFamily="Arial" FontSize="Medium" TextColor="RoyalBlue" HorizontalOptions="Center"  />
+            <ListView x:Name="lendedBook" ItemSelected="lendeBookSelected" RowHeight="80" HeightRequest="360" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                            
+                                
+                                <Frame BorderColor="Red">
+                                    <Image Source="{Binding booksCover}" HeightRequest="50" WidthRequest="50"></Image>
+                                    </Frame>
+                                
+                                    <StackLayout  HorizontalOptions="Center" Orientation="Vertical" VerticalOptions="StartAndExpand">
+                                        <StackLayout   Orientation="Horizontal" VerticalOptions="StartAndExpand" >
+                                    <Label Text="Book name:" FontFamily="Arial" FontSize="Small" TextColor="RoyalBlue"></Label>
+                                    <Label Text = "{Binding booksName}"  FontFamily="Arial" FontSize="Small" TextColor="RoyalBlue" />
+
+                                </StackLayout>
+                                <StackLayout   Orientation="Horizontal" VerticalOptions="StartAndExpand">
+                                    <Label Text="Book  type:" FontFamily="Arial" FontSize="Small" TextColor="RoyalBlue"></Label>
+                                    <Label Text = "{Binding booksType}" FontFamily="Arial" FontSize="Small" TextColor="RoyalBlue" />
+                                </StackLayout>
+
+                                <StackLayout   Orientation="Horizontal" VerticalOptions="StartAndExpand">
+                                    <Label Text="Description:" FontFamily="Arial" FontSize="Small" TextColor="RoyalBlue"></Label>
+                                    <Label Text = "{Binding description}" FontFamily="Arial" FontSize="Small" TextColor="RoyalBlue" />
+                                </StackLayout>
+ 
+                            </StackLayout>
+                                </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+            <StackLayout HeightRequest="50">
+                <Button Text="PostBook" Clicked="postAbook" FontFamily="Arial" FontSize="Medium" BackgroundColor="LightBlue" ></Button>
+            </StackLayout>
+            
+            <StackLayout>
+                <Label Text="Lended books:" FontFamily="Arial" FontSize="Medium" TextColor="RoyalBlue" HorizontalOptions="Center" VerticalOptions="Start" />
+        <ListView x:Name="booksLended" ItemSelected="booksLendedSelected" RowHeight="80" HeightRequest="360" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                                <StackLayout Orientation="Horizontal">
+
+                                    <Frame BorderColor="Red">
+                                        <Image Source="{Binding booksCover}" HeightRequest="50" WidthRequest="50"></Image>
+                                    </Frame>
+                                    
+                                    <StackLayout  HorizontalOptions="Center" Orientation="Vertical" VerticalOptions="StartAndExpand">
+                                    <StackLayout   Orientation="Horizontal" VerticalOptions="StartAndExpand" >
+                                        <Label Text="Book name:" FontFamily="Arial" FontSize="Small" TextColor="RoyalBlue"></Label>
+                                        <Label Text = "{Binding booksName}"  FontFamily="Arial" FontSize="Small" TextColor="RoyalBlue" />
+
+                                    </StackLayout>
+                                    <StackLayout   Orientation="Horizontal" VerticalOptions="StartAndExpand">
+                                        <Label Text="Book  type:" FontFamily="Arial" FontSize="Small" TextColor="RoyalBlue"></Label>
+                                        <Label Text = "{Binding booksType}" FontFamily="Arial" FontSize="Small" TextColor="RoyalBlue" />
+                                    </StackLayout>
+
+                                    <StackLayout   Orientation="Horizontal" VerticalOptions="StartAndExpand">
+                                        <Label Text="Description:" FontFamily="Arial" FontSize="Small" TextColor="RoyalBlue"></Label>
+                                        <Label Text = "{Binding description}" FontFamily="Arial" FontSize="Small" TextColor="RoyalBlue" />
+                                    </StackLayout>
+                                </StackLayout>
+                                    </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+       
+        
+        </StackLayout>
+    </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
